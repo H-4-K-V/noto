@@ -1,5 +1,6 @@
 import { AtSign, LockKeyhole } from "lucide-react";
 import { login } from "./actions";
+import { SubmitButton } from "@/components/SubmitButton";
 import Link from "next/link";
 
 export default function Login() {
@@ -34,12 +35,7 @@ export default function Login() {
             <LockKeyhole size={16} />
           </div>
         </div>
-        <button
-          formAction={login}
-          className="mt-10 w-full rounded-md bg-black px-3 py-2 text-white transition hover:cursor-pointer hover:bg-zinc-800"
-        >
-          Log in
-        </button>
+        <SubmitButton name="Login" action={login} />
       </form>
       <footer className="mt-2 w-full text-left">
         <Link
