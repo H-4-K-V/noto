@@ -3,7 +3,6 @@ import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
 const font = Work_Sans({
-  variable: "--font-work-sans",
   subsets: ["latin"],
 });
 
@@ -19,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.variable} antialiased`}>{children}</body>
+      <body className={`${font.className} antialiased`}>{children}</body>
     </html>
   );
 }
