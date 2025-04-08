@@ -2,8 +2,11 @@
 
 import { House, Album, Settings } from "lucide-react";
 import { FileManager } from "@/components/FileManager";
+import { useState } from "react";
 
 export default function Dashboard() {
+  const [fileManagerOpen, setFileManagerOpen] = useState(false);
+
   return (
     <div className="flex h-dvh">
       <div className="flex flex-col items-center px-6 py-8">
@@ -15,7 +18,10 @@ export default function Dashboard() {
           <button className="p-1">
             <House size={24} />
           </button>
-          <button className="p-1">
+          <button
+            className="p-1"
+            onClick={() => setFileManagerOpen(!fileManagerOpen)}
+          >
             <Album size={24} />
           </button>
         </nav>
@@ -25,7 +31,7 @@ export default function Dashboard() {
       </div>
 
       <div className="h-full border-l border-zinc-50"></div>
-      <FileManager />
+      {fileManagerOpen && <FileManager />}
       <main className="flex grow"></main>
     </div>
   );
