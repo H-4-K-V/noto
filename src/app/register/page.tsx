@@ -7,7 +7,7 @@ export default function Login() {
   return (
     <main className="mx-auto flex h-dvh w-dvw max-w-[556px] flex-col items-center justify-center max-md:px-3">
       <h1 className="font-Georgia mb-2 text-2xl leading-[100%]">NOTO</h1>
-      <div className="h-fit w-full border-b border-zinc-50"></div>
+      <div className="w-full border-b border-zinc-50"></div>
       <form className="mt-10 w-full">
         <div className="relative">
           <input
