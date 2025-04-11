@@ -2,6 +2,7 @@
 
 import { House, Album, Settings } from "lucide-react";
 import { FileManager } from "@/components/FileManager";
+import { Home } from "@/components/Home";
 import { useState } from "react";
 
 export default function Dashboard() {
@@ -32,7 +33,9 @@ export default function Dashboard() {
 
       <div className="h-full border-l border-zinc-50"></div>
       {fileManagerOpen && <FileManager />}
-      <main className="flex grow"></main>
+      <main className="flex grow items-center justify-center">
+        <Home />
+      </main>
     </div>
   );
 }
